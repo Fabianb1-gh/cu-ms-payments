@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: cu-ms-payments
-  namespace: edisonpaul4-dev
+  namespace: fabianb1-dev
   labels:
     app: cu-ms-payments
     areanegocio: pagos
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: hola-mundo
-          image: edisonpaul4/cu-ms-payments:{{ imageTag }}
+          image: fabianb1/cu-ms-payments:{{ imageTag }}
           ports:
             - containerPort: 3000
           resources:
@@ -66,7 +66,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: cu-ms-payments
-  namespace: edisonpaul4-dev
+  namespace: fabianb1-dev
 spec:
   selector:
     app: cu-ms-payments
@@ -79,7 +79,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: cu-ms-payments
-  namespace: edisonpaul4-dev
+  namespace: fabianb1-dev
 data:
   LOG_LEVEL: debug
 ---
@@ -87,7 +87,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: cu-ms-payments
-  namespace: edisonpaul4-dev
+  namespace: fabianb1-dev
 data:
   DATABASE_PASSWORD: U3VwZXJTZWd1cm8yMDI1
 ---
@@ -95,7 +95,7 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: cu-ms-payments
-  namespace: edisonpaul4-dev
+  namespace: fabianb1-dev
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
