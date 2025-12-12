@@ -19,7 +19,7 @@ except ImportError:
 PORT = 3000
 
 # Configuración de base de datos desde variables de entorno
-DB_HOST = os.environ.get('DATABASE_HOST', 'mi-postgres-postgresql-primary.chris100500-dev.svc.cluster.local')
+DB_HOST = os.environ.get('DATABASE_HOST', 'mi-postgres-postgresql.fabianb1-dev.svc.cluster.local')
 DB_PORT = os.environ.get('DATABASE_PORT', '5432')
 DB_NAME = os.environ.get('DATABASE_NAME', 'postgres')
 DB_USER = os.environ.get('DATABASE_USER', 'postgres')
