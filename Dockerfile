@@ -1,9 +1,10 @@
 # IMAGEN BASE
-FROM edisonpaul4/super-imagen-base:1
+FROM python:3.11-slim
 # INSTRUCCIONES
 WORKDIR /app
 
-RUN echo "Ejecutando instrucciones adicionales..."
+RUN pip install psycopg2-binary
+
 # Copiar el archivo de la aplicación
 COPY app.py .
 
