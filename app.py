@@ -1,7 +1,7 @@
 
 #!/usr/bin/env python3
 """
-Servidor HTTP simple que responde Hola Mundo y permite GET y POST a la base de datos
+Servidor HTTP simple que responde Hola Mundo M2 y permite GET y POST a la base de datos
 """
 import http.server
 import socketserver
@@ -88,7 +88,7 @@ class HolaMundoHandler(http.server.SimpleHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(json.dumps(result).encode('utf-8'))
         else:
-            self._send_text_response('<h1>Hola Mundo desde el MS2</h1>')
+            self._send_text_response('<h1>Hola Mundo M2</h1>')
 
     def do_POST(self):
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
